@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/left_app"
+    android:layout_marginStart="@dimen/left_app"
+    android:background="@drawable/shape14_white"
+    android:layout_marginTop="@dimen/px17"
+    android:id="@+id/readCollectionLayout"
+    android:paddingTop="@dimen/px16"
+    android:paddingBottom="@dimen/px16">
+
+    <TextView
+        android:id="@+id/studyCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="@dimen/left_app"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP13"
+        android:text="53453人学过"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px22"
+        android:layout_marginEnd="@dimen/px22"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/studyCount"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP17"
+        android:textStyle="bold"
+        android:text="以色列和巴基斯塔关于领土的纷争问题解读"
+        android:lines="1"
+        android:ellipsize="end"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutItemReadCollection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+        <include
+            android:id="@+id/itemReadCollection"
+            layout="@layout/item_courseware"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/userHead"
+        android:layout_width="@dimen/px43"
+        android:layout_height="@dimen/px43"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        app:riv_border_color="@color/color_e2"
+        app:riv_border_width="@dimen/px1"
+        android:src="@mipmap/recruit_user_icon"
+        app:layout_constraintTop_toBottomOf="@+id/layoutItemReadCollection"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/px17"
+        android:layout_marginStart="@dimen/px22"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/biyexuanzhangIcon"
+        android:layout_width="@dimen/px20"
+        android:layout_height="@dimen/px20"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        android:visibility="gone"
+        android:src="@mipmap/biyexunzhang"
+        app:layout_constraintBottom_toBottomOf="@+id/userHead"
+        app:layout_constraintRight_toRightOf="@+id/userHead"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/userHead"
+        app:layout_constraintBottom_toBottomOf="@+id/userHead"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="@dimen/px22"
+        android:textSize="@dimen/SP13"
+        android:textColor="@color/black"
+        android:text="2020-05-12"/>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/userHead"
+        app:layout_constraintBottom_toBottomOf="@+id/userHead"
+        app:layout_constraintLeft_toRightOf="@+id/userHead"
+        app:layout_constraintRight_toLeftOf="@+id/time"
+        android:layout_marginStart="@dimen/px11"
+        android:layout_marginEnd="@dimen/px11"
+        android:textSize="@dimen/SP11"
+        android:textColor="@color/color_33"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="孙孙孙"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

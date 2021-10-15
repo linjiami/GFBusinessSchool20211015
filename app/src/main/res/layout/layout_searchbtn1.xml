@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px90"
+    android:background="@drawable/shape14_white">
+
+    <TextView
+        android:id="@+id/searchNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px56"
+        android:layout_marginStart="@dimen/px14"
+        android:layout_marginEnd="@dimen/px14"
+        android:background="@drawable/shape28_themecolor_stroke"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="@string/search_name"
+        android:lines="1"
+        android:paddingStart="@dimen/px60"
+        android:paddingEnd="@dimen/px60"
+        android:textColor="@color/color_aeafaf"
+        android:textSize="@dimen/SP14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/px32"
+        android:layout_height="@dimen/px32"
+        android:layout_marginEnd="@dimen/px24"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/search_homepage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/searchNameTV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_d4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

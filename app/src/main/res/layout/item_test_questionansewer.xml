@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/px14"
+    android:layout_marginBottom="@dimen/px14"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/titleTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginEnd="@dimen/left_app"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP17"
+        android:text="1、公司进行企业文化建设的作用？（单选题）"/>
+
+    <EditText
+        android:id="@+id/contentTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/px190"
+        android:padding="@dimen/px20"
+        android:hint="@string/hint_inputcontent"
+        android:textColor="@color/color_969595"
+        android:textSize="@dimen/SP15"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@+id/titleTest"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginEnd="@dimen/left_app"
+        android:layout_marginTop="@dimen/px18"
+        android:background="@drawable/shape0_b2"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

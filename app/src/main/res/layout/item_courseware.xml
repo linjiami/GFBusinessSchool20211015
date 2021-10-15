@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape14_f5"
+        android:layout_marginTop="@dimen/px25"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginEnd="@dimen/left_app"
+        android:paddingTop="@dimen/px18"
+        android:paddingBottom="@dimen/px18"
+        android:paddingStart="@dimen/px19"
+        android:drawableStart="@mipmap/file_readcollection"
+        android:drawablePadding="@dimen/px18"
+        android:text="以色列和巴基斯坦.PDF"
+        android:textSize="@dimen/SP14"
+        android:textColor="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

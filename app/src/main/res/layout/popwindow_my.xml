@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layoutMyCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_text_color"
+        android:paddingTop="@dimen/px30"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/px125"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/titlePopWindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingStart="@dimen/px40"
+                android:paddingEnd="@dimen/px40"
+                android:paddingBottom="@dimen/px30"
+                android:textColor="@color/white"
+                android:textSize="@dimen/SP18"
+                android:gravity="center"
+                android:text="标题"/>
+
+            <TextView
+                android:id="@+id/msgPopwindow"
+                android:layout_width="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/px50"
+                android:paddingEnd="@dimen/px50"
+                android:paddingBottom="@dimen/px30"
+                app:layout_constraintTop_toBottomOf="@+id/titlePopWindow"
+                android:textSize="@dimen/SP14"
+                android:textColor="@color/white"
+                android:text="人才招聘是大家居给各位经销商提供招聘的"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seekBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:background="@color/white" >
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/currentProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/left_app"
+                android:text="0%"
+                android:textSize="@dimen/SP13"
+                android:textColor="@color/color_33"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px125"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/tvCancleLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvCancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px58"
+                    android:background="@drawable/bianxian4_themecolor_white"
+                    android:gravity="center"
+                    android:minWidth="@dimen/px178"
+                    android:paddingStart="@dimen/px20"
+                    android:paddingEnd="@dimen/px20"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:text="@string/cancle"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/SP17" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/left_app"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px58"
+                    android:minWidth="@dimen/px178"
+                    android:paddingStart="@dimen/px20"
+                    android:paddingEnd="@dimen/px20"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bianxian4_theme_color"
+                    android:gravity="center"
+                    android:text="@string/confirm2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/SP17" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

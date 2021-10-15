@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/px8"
+    android:layout_marginEnd="@dimen/px8"
+    android:layout_marginTop="@dimen/px20"
+    android:paddingBottom="@dimen/px18"
+    android:orientation="vertical"
+    android:background="@drawable/shape12_white">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/voteLogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius_top_right="@dimen/px12"
+        app:riv_corner_radius_top_left="@dimen/px12"
+        android:src="@mipmap/place_huise"/>
+
+    <TextView
+        android:id="@+id/voteName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP14"
+        android:layout_marginTop="@dimen/px20"
+        android:text="孙孙孙"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/voteCount"
+        android:layout_width="@dimen/px220"
+        android:layout_height="@dimen/px43"
+        android:textColor="@color/theme_text_color"
+        android:background="@drawable/shape30_f8"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/SP14"
+        android:layout_marginTop="@dimen/px14"
+        android:text="53453票"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/btnVote"
+        android:layout_width="@dimen/px220"
+        android:layout_height="@dimen/px43"
+        android:background="@drawable/shape30_themecolor"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px14"
+        android:textColor="@color/white"
+        android:text="@string/vote_touta"
+        android:gravity="center"/>
+
+</LinearLayout>

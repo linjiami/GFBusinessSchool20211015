@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/px14"
+    android:layout_marginEnd="@dimen/left_app"
+    android:layout_marginTop="@dimen/px14"
+    android:background="@drawable/bianxian12_b2_white"
+    android:id="@+id/layoutCourseVertical"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutCourseVer"
+        android:paddingBottom="@dimen/px18">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/coverCourseVer"
+            android:layout_width="@dimen/px271"
+            android:layout_height="@dimen/px153"
+            android:layout_marginTop="@dimen/px18"
+            app:riv_border_width="@dimen/px1"
+            app:riv_border_color="@color/color_e0"
+            android:src="@mipmap/placeholder_cover"
+            android:layout_marginStart="@dimen/px12"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/radius_list"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iconRanklistCourseVer" />
+
+        <TextView
+            android:id="@+id/championShareTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/coverCourseVer"
+            app:layout_constraintRight_toRightOf="@+id/coverCourseVer"
+            app:layout_constraintTop_toTopOf="@+id/coverCourseVer"
+            app:layout_constraintBottom_toBottomOf="@+id/coverCourseVer"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:text="冠军分享标题\n多家分店是"
+            android:textSize="@dimen/SP15"
+            android:maxLines="2"/>
+
+        <ImageView
+            android:id="@+id/iconRanklistCourseVer"
+            android:layout_width="@dimen/px34"
+            android:layout_height="@dimen/px30"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/rankinglist1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/titleCourseVer"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:layout_marginStart="@dimen/px22"
+            android:layout_marginEnd="@dimen/px10"
+            app:layout_constraintLeft_toRightOf="@+id/coverCourseVer"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/coverCourseVer"
+            android:text="软装陈列的全攻略"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SP14"
+            android:lines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/teacherFlagCourseVer"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:layout_marginEnd="@dimen/px10"
+            android:layout_marginStart="@dimen/px22"
+            app:layout_constraintLeft_toRightOf="@+id/coverCourseVer"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleCourseVer"
+            android:text="鲁班大学指定高级导师"
+            android:textColor="@color/color_66"
+            android:textSize="@dimen/SP11"
+            android:lines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/countLookkCourseVer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px8"
+            android:layout_marginStart="@dimen/px10"
+            android:layout_marginEnd="@dimen/px10"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/coverCourseVer"
+            android:text="368次观看"
+            android:textColor="@color/color_969595"
+            android:textSize="@dimen/SP11"/>
+
+        <TextView
+            android:id="@+id/teacherNameCourseVer"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px8"
+            android:layout_marginStart="@dimen/px22"
+            app:layout_constraintLeft_toRightOf="@+id/coverCourseVer"
+            app:layout_constraintRight_toLeftOf="@+id/countLookkCourseVer"
+            app:layout_constraintBottom_toBottomOf="@+id/coverCourseVer"
+            android:text="主讲人：孙孙孙"
+            android:textColor="@color/color_969595"
+            android:textSize="@dimen/SP11"
+            android:lines="1"
+            android:ellipsize="end"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutBottomTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/coverCourseVer">
+
+            <ImageView
+                android:id="@+id/iconTest"
+                android:layout_width="@dimen/px30"
+                android:layout_height="@dimen/px30"
+                android:src="@mipmap/test_icon"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/px12"
+                android:layout_marginStart="@dimen/px10"/>
+
+            <TextView
+                android:id="@+id/testPassStateCourseVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/px10"
+                android:layout_marginTop="@dimen/px14"
+                android:text="@string/test_passed"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/SP13"/>
+
+            <TextView
+                android:id="@+id/testCourseVer"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px32"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@+id/iconTest"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/px10"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_marginTop="@dimen/px10"
+                android:text="@string/test"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/SP13"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/sharePassState"
+            android:layout_width="@dimen/px109"
+            android:layout_height="@dimen/px123"
+            android:src="@mipmap/share_passed"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#FFF55030"
+        android:gravity="center"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/delete"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp" />
+</LinearLayout>

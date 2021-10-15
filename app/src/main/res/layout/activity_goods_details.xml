@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px420"
+                android:background="@color/color_d4"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/goodsCover"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px420"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/goodsName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/goodsCover"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginEnd="@dimen/left_app"
+                android:layout_marginTop="@dimen/px30"
+                android:textSize="@dimen/SP15"
+                android:textColor="@color/color_33"
+                android:text="五颜六色的油漆"/>
+
+            <TextView
+                android:id="@+id/integralCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/goodsName"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="@dimen/left_app"
+                android:text="60积分"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/SP15"/>
+
+            <TextView
+                android:id="@+id/goodsCount"
+                android:layout_width="0dp"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/goodsName"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/integralCount"
+                android:layout_marginEnd="@dimen/left_app"
+                android:layout_marginStart="@dimen/left_app"
+                android:text="库存：123"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP15"/>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:background="@color/color_b2"
+                app:layout_constraintTop_toBottomOf="@+id/goodsCount"
+                android:layout_marginTop="@dimen/px30"/>
+
+            <TextView
+                android:id="@+id/titleTestNopassRanklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/line1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/px30"
+                android:layout_marginStart="@dimen/left_app"
+                android:text="@string/goods_introduce"
+                android:textSize="@dimen/SP16"
+                android:textColor="@color/black"/>
+            <View
+                android:id="@+id/line2"
+                android:layout_width="@dimen/px110"
+                android:layout_height="@dimen/px5"
+                app:layout_constraintBottom_toBottomOf="@+id/titleTestNopassRanklist"
+                app:layout_constraintLeft_toLeftOf="@+id/titleTestNopassRanklist"
+                app:layout_constraintRight_toRightOf="@+id/titleTestNopassRanklist"
+                android:background="@color/theme_text_color"/>
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/line2"
+                android:layout_marginTop="@dimen/px20"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/bottomLayout"
+        layout="@layout/bottom_layout"/>
+</LinearLayout>

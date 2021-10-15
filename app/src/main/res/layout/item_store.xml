@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/left_app"
+    android:layout_marginTop="@dimen/px12"
+    android:layout_marginBottom="@dimen/px4"
+    android:layout_marginEnd="@dimen/left_app"
+    android:background="@color/color_0D0509"
+    app:cardBackgroundColor="@color/white"
+    android:id="@+id/storeLayout"
+    app:cardCornerRadius="@dimen/px12"
+    app:cardElevation="@dimen/px5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/countStorePeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/px14"
+            android:layout_marginTop="@dimen/px30"
+            android:text="员工36人"
+            android:textColor="@color/color_757676"
+            android:textSize="@dimen/SP13"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameStore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px16"
+            android:layout_marginTop="@dimen/px27"
+            android:layout_marginEnd="@dimen/px10"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="华南红星美凯龙店"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SP16"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/countStorePeople"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timeToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px16"
+            android:layout_marginTop="@dimen/px28"
+            android:layout_marginEnd="@dimen/px16"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="今日学习总时长：125小时35分"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SP12"
+            app:layout_constraintTop_toBottomOf="@+id/nameStore" />
+
+        <TextView
+            android:id="@+id/integralCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px16"
+            android:layout_marginTop="@dimen/px28"
+            android:layout_marginEnd="@dimen/px16"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="积分总额：368分"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SP12"
+            app:layout_constraintTop_toBottomOf="@+id/timeToday" />
+
+        <TextView
+            android:id="@+id/timeAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px16"
+            android:layout_marginTop="@dimen/px28"
+            android:layout_marginEnd="@dimen/px16"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingBottom="@dimen/px27"
+            android:text="学习总时长：125小时35分"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SP12"
+            app:layout_constraintTop_toBottomOf="@+id/integralCount" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

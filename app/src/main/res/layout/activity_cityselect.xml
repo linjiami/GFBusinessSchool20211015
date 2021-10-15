@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tool_bar_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px20"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/backLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px62"
+            android:paddingStart="@dimen/px40"
+            android:paddingEnd="@dimen/px40"
+            android:layout_marginTop="@dimen/px15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/back"/>
+        </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px62"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/backLayout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="@dimen/px15"
+            android:layout_marginStart="@dimen/px10"
+            android:layout_marginEnd="@dimen/px28"
+            android:background="@drawable/bianxian50_f4">
+
+            <EditText
+                android:id="@+id/search_locate_content_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:drawableStart="@mipmap/search_recruit"
+                android:drawablePadding="@dimen/px20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@null"
+                android:paddingEnd="@dimen/px20"
+                android:paddingStart="@dimen/px20"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:maxLength="16"
+                android:textColorHint="@color/color_ae"
+                android:textSize="@dimen/SP14"
+                android:textColor="@color/color_33"
+                android:hint="@string/Search_locate_content"
+                android:gravity="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/total_city_lv"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.gfbusinessschool.cityselect.LetterListView
+            android:id="@+id/total_city_letters_lv"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"/>
+
+        <ListView
+            android:id="@+id/search_city_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/no_search_result_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="抱歉,暂时没有找到相关城市"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

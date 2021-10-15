@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <com.gfbusinessschool.view.TitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"
+            android:layout_marginTop="@dimen/px20"
+            android:textSize="@dimen/SP15"
+            android:textColor="@color/color_33"
+            android:text="@string/connect_people"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px72"
+            android:textCursorDrawable="@drawable/edittext_cursor_color"
+            android:inputType="text"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"
+            android:hint="@string/please_input"
+            android:textColor="@color/color_aeafaf"
+            android:textSize="@dimen/SP15"
+            android:background="@color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px1"
+            android:background="@color/color_b2"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"
+            android:layout_marginTop="@dimen/px20"
+            android:textSize="@dimen/SP15"
+            android:textColor="@color/color_33"
+            android:text="@string/connect_phone"/>
+
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px72"
+            android:textCursorDrawable="@drawable/edittext_cursor_color"
+            android:inputType="phone"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"
+            android:hint="@string/please_input"
+            android:textColor="@color/color_aeafaf"
+            android:textSize="@dimen/SP15"
+            android:background="@color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px1"
+            android:background="@color/color_b2"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"
+            android:layout_marginTop="@dimen/px20"
+            android:textSize="@dimen/SP15"
+            android:textColor="@color/color_33"
+            android:text="@string/connect_address"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px72"
+            android:textCursorDrawable="@drawable/edittext_cursor_color"
+            android:inputType="text"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"
+            android:hint="@string/hint_connect_address"
+            android:textColor="@color/color_aeafaf"
+            android:textSize="@dimen/SP15"
+            android:background="@color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px1"
+            android:background="@color/color_b2"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"/>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/bottomLayout"
+        layout="@layout/bottom_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 主体背景颜色值 -->
+    <item> <!--设置只有底部有边框-->
+        <shape>
+            <corners android:radius="1000dp"/>
+            <solid android:color="@color/theme_text_color" />
+        </shape>
+    </item>
+</layer-list>

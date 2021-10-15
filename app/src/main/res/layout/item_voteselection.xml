@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutVoteSelection"
+    android:background="@drawable/shape12_white"
+    android:layout_marginStart="@dimen/left_app"
+    android:layout_marginEnd="@dimen/left_app"
+    android:layout_marginTop="@dimen/px30"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/hotVoteIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:riv_corner_radius_top_right="@dimen/px12"
+        app:riv_corner_radius_top_left="@dimen/px12"
+        app:riv_border_width="@dimen/px1"
+        app:riv_border_color="@color/color_e0"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/placeholder_cover"
+        app:layout_constraintTop_toBottomOf="@+id/titleHotVote" />
+
+    <TextView
+        android:id="@+id/countVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hotVoteIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/px20"
+        android:layout_marginEnd="@dimen/left_app"
+        android:textColor="@color/color_969595"
+        android:textSize="@dimen/SP11"
+        android:text="236人"/>
+
+
+    <TextView
+        android:id="@+id/titleVote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/countVote"
+        app:layout_constraintTop_toBottomOf="@+id/hotVoteIcon"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px18"
+        android:layout_marginEnd="@dimen/px10"
+        android:text="评选出企业月度最佳员工分享的作品"
+        android:textColor="@color/color_66"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/SP13"/>
+
+    <TextView
+        android:id="@+id/timeVote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/titleVote"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginEnd="@dimen/left_app"
+        android:layout_marginTop="@dimen/px10"
+        android:textColor="@color/color_969595"
+        android:textSize="@dimen/SP11"
+        android:text="2021-01-01  18:30至2020-01-12   20:30"/>
+
+    <TextView
+        android:id="@+id/infoVote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/timeVote"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginEnd="@dimen/left_app"
+        android:layout_marginTop="@dimen/px10"
+        android:paddingBottom="@dimen/px24"
+        android:textColor="@color/color_969595"
+        android:maxLines="3"
+        android:textSize="@dimen/SP12"
+        android:text="活动介绍"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

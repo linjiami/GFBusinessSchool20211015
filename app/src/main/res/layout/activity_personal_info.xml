@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_f4"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayoutPersonal"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintVertical_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/userBg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px312"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px18"
+                android:layout_marginEnd="@dimen/left_app"
+                android:background="@drawable/bianxian12_theme_color"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/userImg"
+                    android:layout_width="@dimen/px146"
+                    android:layout_height="@dimen/px146"
+                    android:scaleType="centerCrop"
+                    app:riv_oval="true"
+                    android:src="@mipmap/recruit_user_icon" />
+
+                <TextView
+                    android:id="@+id/changeUserHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px42"
+                    android:layout_marginTop="@dimen/px30"
+                    android:background="@drawable/bianxian12_bd7a2c"
+                    android:paddingStart="@dimen/px22"
+                    android:paddingEnd="@dimen/px22"
+                    android:text="@string/change_user_head"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/SP15" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px18"
+                android:layout_marginEnd="@dimen/left_app"
+                android:background="@drawable/bianxian12_white"
+                android:paddingBottom="@dimen/px32">
+
+                <TextView
+                    android:id="@+id/nickNameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px24"
+                    android:layout_marginTop="@dimen/px32"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="@string/nickname"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nickName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px30"
+                    android:layout_marginTop="@dimen/px32"
+                    android:layout_marginEnd="@dimen/px24"
+                    android:background="@null"
+                    android:lineSpacingExtra="@dimen/lineSpacingExtra"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="孙孙孙"
+                    android:textColor="@color/color_33"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/nickNameTitle"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sexTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px24"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="@string/sex"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nickName" />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px30"
+                    android:layout_marginEnd="@dimen/px24"
+                    android:background="@null"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="男"
+                    android:textColor="@color/color_33"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/sexTitle"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nickName" />
+
+                <TextView
+                    android:id="@+id/addressTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px24"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="@string/address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sex" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px30"
+                    android:layout_marginEnd="@dimen/px24"
+                    android:background="@null"
+                    android:lineSpacingExtra="@dimen/lineSpacingExtra"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="北京市"
+                    android:textColor="@color/color_33"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/addressTitle"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sex" />
+
+                <TextView
+                    android:id="@+id/storeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px24"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="@string/store_whore"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address" />
+
+                <TextView
+                    android:id="@+id/store"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px30"
+                    android:layout_marginEnd="@dimen/px24"
+                    android:background="@null"
+                    android:lineSpacingExtra="@dimen/lineSpacingExtra"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="华南红星美凯龙"
+                    android:textColor="@color/color_33"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/storeTitle"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address" />
+
+                <TextView
+                    android:id="@+id/positionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px24"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="@string/position"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/store" />
+
+                <TextView
+                    android:id="@+id/position"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px30"
+                    android:layout_marginEnd="@dimen/px24"
+                    android:background="@null"
+                    android:lineSpacingExtra="@dimen/lineSpacingExtra"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="店长"
+                    android:textColor="@color/color_33"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/positionTitle"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/store" />
+
+                <TextView
+                    android:id="@+id/introductionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="@dimen/px24"
+                    android:paddingTop="@dimen/px18"
+                    android:paddingBottom="@dimen/px18"
+                    android:text="@string/introduction"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/position" />
+
+                <EditText
+                    android:id="@+id/introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px30"
+                    android:layout_marginEnd="@dimen/px24"
+                    android:background="@null"
+                    android:lineSpacingExtra="@dimen/lineSpacingExtra"
+                    android:minHeight="@dimen/px70"
+                    android:hint="编辑简介，展示我的独特态度"
+                    android:textColor="@color/color_33"
+                    android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:textSize="@dimen/SP12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/introductionTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/bottomLayoutPersonal"
+        layout="@layout/bottom_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

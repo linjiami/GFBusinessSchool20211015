@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutCourseHor"
+    android:layout_marginTop="@dimen/px32"
+    android:layout_marginBottom="@dimen/px32"
+    android:layout_marginEnd="@dimen/px6"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/coverCourseHor"
+        android:layout_width="@dimen/px271"
+        android:layout_height="@dimen/px153"
+        android:src="@mipmap/placeholder_cover"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/radius_list"
+        app:riv_border_color="@color/color_e0"
+        app:riv_border_width="@dimen/px1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleCourseHor"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px16"
+        app:layout_constraintLeft_toLeftOf="@+id/coverCourseHor"
+        app:layout_constraintRight_toRightOf="@+id/coverCourseHor"
+        app:layout_constraintTop_toBottomOf="@+id/coverCourseHor"
+        android:text="家居设计师认证教育"
+        android:textColor="@color/color_66"
+        android:textSize="@dimen/SP14"
+        android:lines="1"
+        android:ellipsize="end"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

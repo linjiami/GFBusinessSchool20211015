@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/studymap_bg" />
+
+    <ImageView
+        android:id="@+id/iconBack"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px100"
+        android:layout_marginTop="@dimen/px14"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/studymap_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutStudyMapLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconBack">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/studymap_lock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon1"
+            app:layout_constraintRight_toRightOf="@+id/icon1"
+            app:layout_constraintTop_toBottomOf="@+id/icon1" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon2"
+            app:layout_constraintRight_toRightOf="@+id/icon2"
+            app:layout_constraintTop_toBottomOf="@+id/icon2" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon3"
+            app:layout_constraintRight_toRightOf="@+id/icon3"
+            app:layout_constraintTop_toBottomOf="@+id/icon3" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon4"
+            app:layout_constraintRight_toRightOf="@+id/icon4"
+            app:layout_constraintTop_toBottomOf="@+id/icon4" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon5"
+            app:layout_constraintRight_toRightOf="@+id/icon5"
+            app:layout_constraintTop_toBottomOf="@+id/icon5" />
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon6"
+            app:layout_constraintRight_toRightOf="@+id/icon6"
+            app:layout_constraintTop_toBottomOf="@+id/icon6" />
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon7"
+            app:layout_constraintRight_toRightOf="@+id/icon7"
+            app:layout_constraintTop_toBottomOf="@+id/icon7" />
+
+        <TextView
+            android:id="@+id/text8"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon8"
+            app:layout_constraintRight_toRightOf="@+id/icon8"
+            app:layout_constraintTop_toBottomOf="@+id/icon8" />
+
+
+        <TextView
+            android:id="@+id/text9"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon9"
+            app:layout_constraintRight_toRightOf="@+id/icon9"
+            app:layout_constraintTop_toBottomOf="@+id/icon9" />
+
+        <TextView
+            android:id="@+id/text10"
+            android:layout_width="@dimen/px156"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/live_waiting"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP11"
+            app:layout_constraintLeft_toLeftOf="@+id/icon10"
+            app:layout_constraintRight_toRightOf="@+id/icon10"
+            app:layout_constraintTop_toBottomOf="@+id/icon10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconBack"
+        app:layout_constraintVertical_weight="1">
+
+        <include
+            android:id="@+id/layoutNoData"
+            layout="@layout/layout_no_data" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

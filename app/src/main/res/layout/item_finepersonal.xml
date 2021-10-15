@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutFinePersonal"
+    android:layout_marginBottom="@dimen/px32"
+    android:layout_marginEnd="@dimen/px18"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/headFinePersonal"
+        android:layout_width="@dimen/px220"
+        android:layout_height="@dimen/px220"
+        android:src="@mipmap/placeholder_head"
+        app:riv_border_color="@color/color_e0"
+        app:riv_border_width="@dimen/px1"
+        android:layout_marginTop="@dimen/px32"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/radius_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pointFinePersonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px27"
+        app:layout_constraintRight_toRightOf="@+id/headFinePersonal"
+        app:layout_constraintTop_toBottomOf="@+id/headFinePersonal"
+        android:text="368积分"
+        android:textColor="@color/color_66"
+        android:textSize="@dimen/SP11"/>
+
+    <TextView
+        android:id="@+id/nameFinePersonal"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px22"
+        app:layout_constraintLeft_toLeftOf="@+id/headFinePersonal"
+        app:layout_constraintRight_toLeftOf="@+id/pointFinePersonal"
+        app:layout_constraintTop_toBottomOf="@+id/headFinePersonal"
+        android:text="孙孙孙"
+        android:textColor="@color/color_66"
+        android:textSize="@dimen/SP14"
+        android:lines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/teacherFlagFinePersonal"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px16"
+        app:layout_constraintLeft_toLeftOf="@+id/headFinePersonal"
+        app:layout_constraintRight_toRightOf="@+id/headFinePersonal"
+        app:layout_constraintTop_toBottomOf="@+id/nameFinePersonal"
+        android:text="北京十里河居然之家"
+        android:textColor="@color/color_66"
+        android:textSize="@dimen/SP11"
+        android:lines="1"
+        android:ellipsize="end"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

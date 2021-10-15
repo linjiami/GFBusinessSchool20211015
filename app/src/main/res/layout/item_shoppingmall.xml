@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutShopping"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/px10"
+    android:layout_marginTop="@dimen/px12"
+    android:paddingBottom="@dimen/px22"
+    android:background="@drawable/shape12_white">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/place_huise"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_top_left="@dimen/px12"
+        app:riv_corner_radius_top_right="@dimen/px12" />
+
+    <ImageView
+        android:id="@+id/soldOutIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/shopmall_soldout"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="@+id/cover"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        android:layout_margin="@dimen/px60"/>
+
+    <TextView
+        android:id="@+id/goodsName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px10"
+        android:layout_marginTop="@dimen/px22"
+        android:layout_marginEnd="@dimen/px10"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="卷尺-50M"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/countIntegral"
+        app:layout_constraintTop_toBottomOf="@+id/cover" />
+
+    <TextView
+        android:id="@+id/countIntegral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px8"
+        android:layout_marginEnd="@dimen/px10"
+        android:text="200积分"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/SP15"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goodsName" />
+
+    <TextView
+        android:id="@+id/countGoods"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/countIntegral"
+        android:layout_marginStart="@dimen/px10"
+        android:layout_marginTop="@dimen/px16"
+        android:layout_marginEnd="@dimen/px10"
+        android:text="库存：20"
+        android:textColor="@color/color_878C97"
+        android:textSize="@dimen/SP11"
+        app:layout_constraintTop_toBottomOf="@+id/goodsName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

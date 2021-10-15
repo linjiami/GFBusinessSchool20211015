@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/accountET"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px73"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginEnd="@dimen/left_app"
+        android:background="@drawable/bianxian6_b2_white"
+        android:ellipsize="end"
+        android:hint="@string/hint_account"
+        android:singleLine="true"
+        android:paddingStart="@dimen/px20"
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_b2"
+        android:textSize="@dimen/SP16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px73"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px24"
+        android:layout_marginEnd="@dimen/left_app"
+        android:background="@drawable/bianxian6_b2_white"
+        android:ellipsize="end"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:paddingStart="@dimen/px20"
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_b2"
+        android:textSize="@dimen/SP16"
+        app:layout_constraintTop_toBottomOf="@+id/accountET" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px73"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px24"
+        android:layout_marginEnd="@dimen/left_app"
+        android:background="@drawable/shape12_theme_color"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/SP16"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+    <View
+        android:id="@+id/lineLogin"
+        android:layout_width="@dimen/px110"
+        android:layout_height="@dimen/px5"
+        android:layout_marginBottom="@dimen/px28"
+        android:background="@drawable/bianxian_bottom_line"
+        app:layout_constraintBottom_toTopOf="@+id/accountET"
+        app:layout_constraintLeft_toLeftOf="@+id/staffLoginBtn"
+        app:layout_constraintRight_toRightOf="@+id/staffLoginBtn" />
+    <TextView
+        android:id="@+id/staffLoginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_app"
+        android:paddingBottom="@dimen/px24"
+        android:paddingTop="@dimen/px40"
+        android:gravity="center"
+        android:text="@string/login_staff"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP16"
+        app:layout_constraintBottom_toTopOf="@+id/accountET"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/managerLoginBtn" />
+
+    <TextView
+        android:id="@+id/managerLoginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/left_app"
+        android:paddingBottom="@dimen/px24"
+        android:paddingTop="@dimen/px40"
+        android:gravity="center"
+        android:text="@string/login_manager"
+        android:textColor="@color/color_66"
+        android:textSize="@dimen/SP16"
+        app:layout_constraintBottom_toTopOf="@+id/accountET"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/staffLoginBtn"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/checkPrivate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/check_login"
+        app:layout_constraintTop_toTopOf="@+id/loginAgreement"
+        app:layout_constraintRight_toLeftOf="@+id/loginAgreement"
+        android:paddingEnd="@dimen/px10"
+        android:paddingStart="@dimen/px40"
+        android:paddingBottom="@dimen/px40"
+        android:paddingTop="@dimen/px5"/>
+    <TextView
+        android:id="@+id/loginAgreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px54"
+        android:text="@string/login_agreeement"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/logoCompany"
+        android:layout_width="@dimen/px160"
+        android:layout_height="@dimen/px160"
+        app:riv_corner_radius="@dimen/radius_list"
+        android:src="@mipmap/logo"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/staffLoginBtn"
+        android:layout_marginBottom="@dimen/px109"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

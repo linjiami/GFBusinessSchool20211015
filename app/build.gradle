@@ -1,0 +1,144 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.alibaba.arouter'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('E:\\work\\GFBusinessSchoolBranch\\GFBusinessSchool20210520\\gfbusinessschool.jks')
+            storePassword 'gfzh1234'
+            keyAlias 'gfbusinessschool'
+            keyPassword 'gfzh1234'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.gfbusinessschool"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 16
+        versionName "3.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64' 'armeabi-v7a', 'arm64-v8a'
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "67658a0082b8229ca147e70e", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        debug {
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+        }
+        release {
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/libijkplayer.so'
+        pickFirst 'lib/x86/libijksdl.so'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    // Butterknife requires Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs' //this way we can find the .aar file in libs folder
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v4'
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.recyclerview:recyclerview'
+    //网络
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    //fastjson
+    implementation 'com.alibaba:fastjson:1.2.75'
+    //图片
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //沉浸式
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    //ARouter
+    implementation 'com.alibaba:arouter-api:1.5.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
+    //banner
+    implementation 'com.youth.banner:banner:2.1.0'
+    //文字跑马灯效果
+    implementation 'com.xj.marqueeView:marqueeView:0.1.20'
+    //GSYVideoPlayer 完整版引入
+    implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer:v8.1.5-jitpack'
+    //ucrop图片裁剪
+    implementation 'com.github.yalantis:ucrop:2.2.6'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    //图表
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //二三级联动
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    //七牛上传视频
+    implementation 'com.qiniu:qiniu-android-sdk:8.2.+'
+    //pdf文件
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    //极光统计
+    implementation 'cn.jiguang.sdk:janalytics:2.1.0' // 此处以JAnalytics 2.1.0 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.6'  // 此处以JMlink 1.2.0 版本为例。
+}

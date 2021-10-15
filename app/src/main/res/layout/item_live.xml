@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutLive"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/left_app"
+    android:layout_marginEnd="@dimen/left_app"
+    android:layout_marginBottom="@dimen/px18"
+    android:layout_marginTop="@dimen/px18"
+    android:paddingBottom="@dimen/px20"
+    android:background="@drawable/bianxian15_white">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/coverLive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_top_left="@dimen/px15"
+        app:riv_corner_radius_top_right="@dimen/px15"
+        android:src="@mipmap/placeholder_cover"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/titleLive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px21"
+        android:layout_marginStart="@dimen/px25"
+        android:layout_marginEnd="@dimen/px25"
+        app:layout_constraintTop_toBottomOf="@+id/coverLive"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="直播标题直播标题"
+        android:textSize="@dimen/SP14"
+        android:textColor="@color/color_33"/>
+
+    <TextView
+        android:id="@+id/teacherLive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px16"
+        android:layout_marginStart="@dimen/px25"
+        android:layout_marginEnd="@dimen/px25"
+        app:layout_constraintTop_toBottomOf="@+id/titleLive"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="主讲人：孙晓雨"
+        android:textSize="@dimen/SP12"
+        android:textColor="@color/color_66"/>
+
+    <TextView
+        android:id="@+id/liveState"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px44"
+        android:layout_marginEnd="@dimen/px25"
+        android:paddingStart="@dimen/px28"
+        android:paddingEnd="@dimen/px28"
+        android:layout_marginTop="@dimen/px4"
+        app:layout_constraintTop_toBottomOf="@+id/teacherLive"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bianxian12_theme_color"
+        android:text="进行中"
+        android:textSize="@dimen/SP13"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/timeLive"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px25"
+        android:layout_marginEnd="@dimen/px10"
+        app:layout_constraintTop_toTopOf="@+id/liveState"
+        app:layout_constraintBottom_toBottomOf="@+id/liveState"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/liveState"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="2019-12-12 14:00"
+        android:textSize="@dimen/SP12"
+        android:textColor="@color/color_66"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

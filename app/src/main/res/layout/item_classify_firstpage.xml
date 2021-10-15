@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutClassifyFP"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/px27"
+    android:paddingBottom="@dimen/px27">
+
+    <ImageView
+        android:id="@+id/iconClassifyFP"
+        android:layout_width="@dimen/px104"
+        android:layout_height="@dimen/px104"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/guanjun" />
+
+    <TextView
+        android:id="@+id/titleClassifyFP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iconClassifyFP"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/px14"
+        android:text="课程中心"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP12" />
+
+    <TextView
+        android:id="@+id/msgCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/px27"
+        android:minHeight="@dimen/px27"
+        android:background="@drawable/shape14_bd7a2c"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/iconClassifyFP"
+        android:visibility="gone"
+        android:padding="@dimen/px2"
+        android:textSize="@dimen/SP8"
+        android:text="1"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

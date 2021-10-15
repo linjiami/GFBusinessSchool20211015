@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minHeight="@dimen/px88"
+    android:layout_marginStart="@dimen/left_app"
+    android:layout_marginEnd="@dimen/left_app"
+    android:layout_marginTop="@dimen/px20"
+    android:paddingBottom="@dimen/px30"
+    android:background="@drawable/bianxian12_white">
+
+    <TextView
+        android:id="@+id/timeIntegral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px30"
+        android:layout_marginEnd="@dimen/px24"
+        android:layout_marginStart="@dimen/px10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="18/12/10  18:20:23"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP16"/>
+
+    <TextView
+        android:id="@+id/commentIntegral"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px30"
+        android:layout_marginStart="@dimen/px24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/timeIntegral"
+        android:text="日常签到"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP16"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

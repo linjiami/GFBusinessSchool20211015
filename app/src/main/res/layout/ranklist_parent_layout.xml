@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/left_app"
+    android:layout_marginTop="@dimen/px18"
+    android:layout_marginEnd="@dimen/left_app"
+    android:background="@drawable/bianxian15_white">
+
+    <TextView
+        android:id="@+id/clearancerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px24"
+        android:layout_marginTop="@dimen/px44"
+        android:text="@string/allstudy_clearancerate"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP16"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lookAllClearancerate"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px44"
+        android:layout_marginTop="@dimen/px38"
+        android:layout_marginEnd="@dimen/px25"
+        android:background="@drawable/bianxian12_theme_color"
+        android:gravity="center"
+        android:paddingStart="@dimen/px14"
+        android:paddingEnd="@dimen/px14"
+        android:text="@string/look_all"
+        android:textColor="@color/white"
+        android:textSize="@dimen/SP13"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTab1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px25"
+        android:layout_marginTop="@dimen/px28"
+        android:layout_marginEnd="@dimen/px25"
+        app:layout_constraintTop_toBottomOf="@+id/clearancerate">
+
+        <include
+            android:id="@+id/allCleacrancerateTab"
+            layout="@layout/tab_ranklist" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clearanceRateRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/px48"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTab1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

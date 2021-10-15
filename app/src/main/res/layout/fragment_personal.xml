@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/px50">
+
+        <View
+            android:id="@+id/personalBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px340"
+            android:background="@color/theme_text_color"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/compayLogo"
+            android:layout_width="@dimen/px56"
+            android:layout_height="@dimen/px56"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px73"
+            android:scaleType="centerCrop"
+            app:riv_border_width="@dimen/px1"
+            app:riv_border_color="@color/white"
+            android:src="@mipmap/placeholder_head"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px21"
+            android:text="企业商学院"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP15"
+            app:layout_constraintBottom_toBottomOf="@+id/compayLogo"
+            app:layout_constraintLeft_toRightOf="@+id/compayLogo"
+            app:layout_constraintTop_toTopOf="@+id/compayLogo" />
+
+        <TextView
+            android:id="@+id/changeUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="@dimen/left_app"
+            android:paddingRight="@dimen/left_app"
+            android:paddingBottom="@dimen/px26"
+            android:text="@string/change_user"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP13"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/companyName" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutUser"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px355"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px18"
+            android:layout_marginEnd="@dimen/left_app"
+            android:background="@drawable/bianxian15_white"
+            app:layout_constraintTop_toBottomOf="@+id/compayLogo">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/personel_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/px15" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/userIcon"
+                android:layout_width="@dimen/px126"
+                android:layout_height="@dimen/px126"
+                android:layout_marginStart="@dimen/px20"
+                android:layout_marginTop="@dimen/px38"
+                android:scaleType="centerCrop"
+                app:riv_border_color="@color/color_e0"
+                app:riv_border_width="@dimen/px1"
+                app:riv_oval="true"
+                android:src="@mipmap/recruit_user_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/biyexuanzhangIcon"
+                android:layout_width="@dimen/px40"
+                android:layout_height="@dimen/px40"
+                android:scaleType="centerCrop"
+                app:riv_oval="true"
+                android:visibility="gone"
+                android:src="@mipmap/biyexunzhang"
+                app:layout_constraintBottom_toBottomOf="@+id/userIcon"
+                app:layout_constraintRight_toRightOf="@+id/userIcon"/>
+
+            <ImageView
+                android:id="@+id/iconRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px12"
+                android:layout_marginEnd="@dimen/px36"
+                android:src="@mipmap/right_jiantou_personel"
+                app:layout_constraintBottom_toBottomOf="@+id/userIcon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/userIcon" />
+
+            <TextView
+                android:id="@+id/nameUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px8"
+                android:layout_marginTop="@dimen/px24"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="孙孙孙"
+                android:textColor="@color/color_B97322"
+                android:textSize="@dimen/SP18"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/userIcon"
+                app:layout_constraintTop_toTopOf="@+id/userIcon" />
+
+            <TextView
+                android:id="@+id/countPointUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px8"
+                android:layout_marginTop="@dimen/px24"
+                android:text="368积分"
+                app:layout_goneMarginStart="@dimen/px30"
+                android:textColor="@color/color_B97322"
+                android:textSize="@dimen/SP16"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/nameUser"
+                app:layout_constraintRight_toLeftOf="@+id/iconRight"
+                app:layout_constraintBottom_toBottomOf="@+id/nameUser" />
+
+
+            <TextView
+                android:id="@+id/addressUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px8"
+                android:layout_marginTop="@dimen/px14"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="辽宁-大学  华南红星美凯龙店"
+                android:textColor="@color/color_B97322"
+                android:textSize="@dimen/SP13"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/userIcon"
+                app:layout_constraintRight_toLeftOf="@+id/iconRight"
+                app:layout_constraintTop_toBottomOf="@+id/nameUser" />
+
+            <TextView
+                android:id="@+id/tvSigin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px30"
+                android:drawablePadding="@dimen/px11"
+                android:gravity="center"
+                android:text="@string/singin"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                app:drawableTopCompat="@mipmap/qiandao_personel"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tvCollected"
+                app:layout_constraintTop_toBottomOf="@+id/userIcon" />
+
+            <TextView
+                android:id="@+id/tvCollected"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px30"
+                android:drawablePadding="@dimen/px11"
+                android:gravity="center"
+                android:text="@string/collected"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                app:drawableTopCompat="@mipmap/collected_personel"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/tvSigin"
+                app:layout_constraintRight_toLeftOf="@+id/tvHistory"
+                app:layout_constraintTop_toBottomOf="@+id/userIcon" />
+
+            <TextView
+                android:id="@+id/tvHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/px16"
+                android:gravity="center"
+                android:text="@string/history"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                app:drawableTopCompat="@mipmap/history_personel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/tvCollected"
+                app:layout_constraintRight_toLeftOf="@+id/tvIntegral"
+                app:layout_constraintTop_toBottomOf="@+id/userIcon" />
+
+            <TextView
+                android:id="@+id/tvIntegral"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/px16"
+                android:gravity="center"
+                android:text="@string/point"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                app:drawableTopCompat="@mipmap/point_personel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/tvHistory"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userIcon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/studyTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px18"
+            android:layout_marginEnd="@dimen/left_app"
+            android:background="@drawable/bianxian15_white"
+            app:layout_constraintTop_toBottomOf="@+id/layoutUser">
+
+            <TextView
+                android:id="@+id/tvStudyMinute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/px38"
+                android:paddingBottom="@dimen/px38"
+                android:lineSpacingExtra="@dimen/px10"
+                android:text="今日学习\n14分钟"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP12"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tvStudyDay"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStudyDay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/px38"
+                android:paddingBottom="@dimen/px38"
+                android:lineSpacingExtra="@dimen/px10"
+                android:text="连续学习\n3天"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/tvStudyMinute"
+                app:layout_constraintRight_toLeftOf="@+id/tvStudyHour"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStudyHour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/px38"
+                android:paddingBottom="@dimen/px38"
+                android:lineSpacingExtra="@dimen/px10"
+                android:text="累计学习\n756小时"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/tvStudyDay"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/integralShoppingMall"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px146"
+            android:background="@drawable/shape15_themecolor_top"
+            app:layout_constraintTop_toBottomOf="@+id/studyTimeLayout"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginEnd="@dimen/left_app"
+            android:layout_marginTop="@dimen/px17"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/integralShoppingMallIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px40"
+                android:layout_marginEnd="@dimen/px35"
+                android:layout_marginTop="@dimen/px14"
+                android:drawablePadding="@dimen/px10"
+                android:gravity="center_vertical"
+                android:text="@string/integral_store"
+                android:textColor="@color/white"
+                android:textSize="@dimen/SP12"
+                android:drawableTint="@color/white"
+                app:drawableEndCompat="@mipmap/right_jiantou_personel"
+                app:drawableStartCompat="@mipmap/jifenshangcheng_personal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px58"
+            android:layout_marginEnd="@dimen/left_app"
+            android:background="@drawable/bianxian15_white"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@+id/integralShoppingMall">
+
+            <TextView
+                android:id="@+id/readCollection"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px86"
+                android:layout_marginStart="@dimen/px40"
+                android:layout_marginEnd="@dimen/px35"
+                android:drawablePadding="@dimen/px10"
+                android:gravity="center_vertical"
+                android:text="@string/read_collection_share"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP12"
+                app:drawableEndCompat="@mipmap/right_jiantou_personel"
+                app:drawableStartCompat="@mipmap/dushuhui_personel" />
+
+            <View
+                android:id="@+id/linereadCollection"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:background="@color/color_b2"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_marginEnd="@dimen/px10"/>
+
+            <TextView
+                android:id="@+id/uploadShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px86"
+                android:layout_marginStart="@dimen/px40"
+                android:layout_marginEnd="@dimen/px35"
+                android:drawablePadding="@dimen/px10"
+                android:gravity="center_vertical"
+                android:text="@string/title_champion_sharing"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP12"
+                app:drawableEndCompat="@mipmap/right_jiantou_personel"
+                app:drawableStartCompat="@mipmap/upload_share_personel" />
+
+            <View
+                android:id="@+id/lineuploadShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:background="@color/color_b2"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_marginEnd="@dimen/px10"/>
+
+            <TextView
+                android:id="@+id/myCertificate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px86"
+                android:layout_marginStart="@dimen/px40"
+                android:layout_marginEnd="@dimen/px35"
+                android:drawablePadding="@dimen/px10"
+                android:gravity="center_vertical"
+                android:text="@string/my_certificate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP12"
+                app:drawableEndCompat="@mipmap/right_jiantou_personel"
+                app:drawableStartCompat="@mipmap/zhengshu_personel" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:background="@color/color_b2"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_marginEnd="@dimen/px10"/>
+
+            <TextView
+                android:id="@+id/joinResearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px86"
+                android:layout_marginStart="@dimen/px40"
+                android:layout_marginEnd="@dimen/px35"
+                android:drawablePadding="@dimen/px10"
+                android:gravity="center_vertical"
+                android:text="@string/join_research"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP12"
+                app:drawableEndCompat="@mipmap/right_jiantou_personel"
+                app:drawableStartCompat="@mipmap/diaoyan_personel" />
+
+            <View
+                android:id="@+id/linejoinResearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:background="@color/color_b2"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_marginEnd="@dimen/px10"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutClearCatch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px86">
+                <TextView
+                    android:id="@+id/titleClearCatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px86"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="@dimen/px40"
+                    android:layout_marginEnd="@dimen/px35"
+                    android:drawablePadding="@dimen/px10"
+                    android:gravity="center_vertical"
+                    android:text="@string/clear_catch"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP12"
+                    app:drawableStartCompat="@mipmap/clearcatch_personel" />
+
+                <TextView
+                    android:id="@+id/countCatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px86"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginStart="@dimen/px40"
+                    android:layout_marginEnd="@dimen/px35"
+                    android:drawablePadding="@dimen/px10"
+                    android:gravity="center_vertical"
+                    android:text="0MB"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP12"
+                    app:drawableEndCompat="@mipmap/right_jiantou_personel" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:background="@color/color_b2"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_marginEnd="@dimen/px10"/>
+
+            <TextView
+                android:id="@+id/changePassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px86"
+                android:layout_marginStart="@dimen/px40"
+                android:layout_marginEnd="@dimen/px35"
+                android:drawablePadding="@dimen/px10"
+                android:gravity="center_vertical"
+                android:text="@string/change_password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP12"
+                app:drawableEndCompat="@mipmap/right_jiantou_personel"
+                app:drawableStartCompat="@mipmap/personal_changepassword" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:background="@color/color_b2"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_marginEnd="@dimen/px10"/>
+
+            <TextView
+                android:id="@+id/privacyAgreement"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px86"
+                android:layout_marginStart="@dimen/px40"
+                android:layout_marginEnd="@dimen/px35"
+                android:drawablePadding="@dimen/px10"
+                android:gravity="center_vertical"
+                android:text="@string/pricacy_agreement"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP12"
+                app:drawableEndCompat="@mipmap/right_jiantou_personel"
+                app:drawableStartCompat="@mipmap/privacyagreement_personel" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:background="@color/color_b2"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_marginEnd="@dimen/px10"/>
+
+            <TextView
+                android:id="@+id/privacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px86"
+                android:layout_marginStart="@dimen/px40"
+                android:layout_marginEnd="@dimen/px35"
+                android:drawablePadding="@dimen/px10"
+                android:gravity="center_vertical"
+                android:text="@string/pricacy_policy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP12"
+                app:drawableEndCompat="@mipmap/right_jiantou_personel"
+                app:drawableStartCompat="@mipmap/privacypolicy_personel" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layoutList"
+            android:paddingTop="@dimen/px40"
+            android:paddingBottom="@dimen/px18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+           <View
+               android:id="@+id/leftLayoutLine"
+               android:layout_width="@dimen/px84"
+               android:layout_height="@dimen/px1"
+               android:background="@color/theme_text_color"/>
+
+            <TextView
+                android:id="@+id/logoutTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px30"
+                android:layout_marginEnd="@dimen/px30"
+                android:text="@string/logout"
+                android:textSize="@dimen/SP11"
+                android:textColor="@color/theme_text_color"/>
+
+            <View
+                android:id="@+id/rigtjLayoutLine"
+                android:layout_width="@dimen/px84"
+                android:layout_height="@dimen/px1"
+                android:background="@color/theme_text_color"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/releaseShareBottom"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintVertical_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px100">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px24"
+                android:text="@string/share_title"
+                android:textColor="@color/color_11"
+                android:textSize="@dimen/SP15" />
+
+            <EditText
+                android:id="@+id/titleShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginEnd="@dimen/left_app"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLength="12"
+                android:hint="@string/hint_share_title"
+                android:minHeight="@dimen/px73"
+                android:textColor="@color/color_11"
+                android:textColorHint="@color/color_AEAFAF"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:textSize="@dimen/SP14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginEnd="@dimen/left_app"
+                android:background="@color/color_b2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px24"
+                android:text="@string/share_classify"
+                android:textColor="@color/color_11"
+                android:textSize="@dimen/SP15" />
+
+            <TextView
+                android:id="@+id/classifyShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px73"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginEnd="@dimen/left_app"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_share_classify"
+                android:textColor="@color/color_11"
+                android:textColorHint="@color/color_AEAFAF"
+                android:textSize="@dimen/SP14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginEnd="@dimen/left_app"
+                android:background="@color/color_b2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px24"
+                android:text="@string/share_content"
+                android:textColor="@color/color_11"
+                android:textSize="@dimen/SP15" />
+
+            <EditText
+                android:id="@+id/contentShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginEnd="@dimen/left_app"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/please_input"
+                android:minHeight="@dimen/px73"
+                android:textColor="@color/color_11"
+                android:textColorHint="@color/color_AEAFAF"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:textSize="@dimen/SP14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginEnd="@dimen/left_app"
+                android:background="@color/color_b2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px24"
+                android:text="@string/share_cover_modle"
+                android:textColor="@color/color_11"
+                android:textSize="@dimen/SP15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px24"
+                android:layout_marginEnd="@dimen/left_app"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/coverModeLayout1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cirCoverMode1"
+                        android:layout_width="@dimen/px32"
+                        android:layout_height="@dimen/px32"
+                        android:src="@mipmap/selected_share" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/coverMode1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px10"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/placeholder_cover"
+                        app:riv_corner_radius="@dimen/px12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/coverModeLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cirCoverMode2"
+                        android:layout_width="@dimen/px32"
+                        android:layout_height="@dimen/px32"
+                        android:layout_marginStart="@dimen/px10"
+                        android:src="@mipmap/select_share" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/coverMode2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px10"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/placeholder_cover"
+                        app:riv_corner_radius="@dimen/px12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/coverModeLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cirCoverMode3"
+                        android:layout_width="@dimen/px32"
+                        android:layout_height="@dimen/px32"
+                        android:layout_marginStart="@dimen/px10"
+                        android:src="@mipmap/select_share" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/coverMode3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px10"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/placeholder_cover"
+                        app:riv_corner_radius="@dimen/px12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px24"
+                android:layout_marginEnd="@dimen/left_app"
+                android:background="@color/color_b2" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px24"
+                android:text="@string/share_video"
+                android:textColor="@color/color_11"
+                android:textSize="@dimen/SP15" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/releaseVideo"
+                android:layout_width="@dimen/px86"
+                android:layout_height="@dimen/px86"
+                android:layout_marginStart="@dimen/left_app"
+                android:layout_marginTop="@dimen/px22"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/add_share"
+                app:riv_corner_radius="@dimen/px12" />
+        </LinearLayout>
+        MyCustomDialog
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/releaseShareBottom"
+        layout="@layout/bottom_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

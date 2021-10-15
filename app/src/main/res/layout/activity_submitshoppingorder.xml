@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px18"
+        android:layout_marginEnd="@dimen/left_app"
+        android:background="@drawable/shape12_white_aeafaf"
+        android:paddingTop="@dimen/px14"
+        android:paddingBottom="@dimen/px14"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/cover"
+            android:layout_width="@dimen/px161"
+            android:layout_height="@dimen/px161"
+            android:layout_marginStart="@dimen/px14"
+            app:riv_corner_radius="@dimen/px12"
+            android:background="@color/color_f4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/addIcon"
+            android:layout_width="@dimen/px38"
+            android:layout_height="@dimen/px38"
+            android:layout_marginEnd="@dimen/px38"
+            android:src="@mipmap/add_shoppingorder"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cover" />
+
+        <EditText
+            android:id="@+id/countGoods"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px70"
+            android:minWidth="@dimen/px70"
+            android:layout_marginEnd="@dimen/px11"
+            android:background="@drawable/shape12_b7"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="1"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP15"
+            android:textCursorDrawable="@drawable/edittext_cursor_color"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
+            app:layout_constraintRight_toLeftOf="@+id/addIcon"
+            app:layout_constraintTop_toTopOf="@+id/cover" />
+
+        <ImageView
+            android:id="@+id/minusIcon"
+            android:layout_width="@dimen/px38"
+            android:layout_height="@dimen/px38"
+            android:layout_marginEnd="@dimen/px11"
+            android:src="@mipmap/minus_shoppingorder"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
+            app:layout_constraintRight_toLeftOf="@+id/countGoods"
+            app:layout_constraintTop_toTopOf="@+id/cover" />
+
+        <TextView
+            android:id="@+id/goodsName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px30"
+            android:layout_marginTop="@dimen/px40"
+            android:layout_marginEnd="@dimen/px30"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="卷尺-50M"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/SP15"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/cover"
+            app:layout_constraintRight_toLeftOf="@+id/minusIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/countIntegral"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px30"
+            android:layout_marginTop="@dimen/px20"
+            android:layout_marginEnd="@dimen/px30"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="200积分"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/SP15"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/cover"
+            app:layout_constraintRight_toLeftOf="@+id/minusIcon"
+            app:layout_constraintTop_toBottomOf="@+id/goodsName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px26"
+        android:layout_marginEnd="@dimen/left_app"
+        android:background="@drawable/shape12_white_aeafaf"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/px28"
+        android:paddingTop="@dimen/px12"
+        android:paddingEnd="@dimen/px24"
+        android:paddingBottom="@dimen/px12"
+        android:text="@string/address_select"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP14"
+        android:drawableTint="@color/theme_text_color"
+        app:drawableEndCompat="@mipmap/right_jiantou_personel"
+        app:layout_constraintTop_toBottomOf="@+id/layout" />
+
+    <TextView
+        android:id="@+id/countAllIntegral"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px82"
+        android:gravity="center"
+        android:text="消费：255积分"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="460"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/pay" />
+
+    <TextView
+        android:id="@+id/pay"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px82"
+        android:background="@color/theme_text_color"
+        android:gravity="center"
+        android:text="@string/title_pay"
+        android:textColor="@color/white"
+        android:textSize="@dimen/SP14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="290"
+        app:layout_constraintLeft_toRightOf="@+id/countAllIntegral"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:background="@color/color_b2"
+        app:layout_constraintBottom_toTopOf="@+id/pay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

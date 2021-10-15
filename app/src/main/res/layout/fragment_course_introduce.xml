@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleCourseDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px24"
+            android:text="公司企业文化"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SP15"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitleCourseDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px12"
+            android:text="公司企业文化"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SP12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleCourseDetails" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px1"
+            android:layout_marginTop="@dimen/px24"
+            android:background="@color/color_e2"
+            app:layout_constraintTop_toBottomOf="@+id/subtitleCourseDetails" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px20"
+            app:layout_constraintTop_toBottomOf="@+id/line1">
+
+            <TextView
+                android:id="@+id/tacherTitleCourseDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_app"
+                android:text="@string/teachertitle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP15"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTeacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tacherTitleCourseDetails"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/px25"
+                android:paddingStart="@dimen/left_app"
+                android:visibility="gone"
+                android:paddingEnd="@dimen/px50"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/courseTeacherLayuout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tacherTitleCourseDetails">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/headIcon"
+                    android:layout_width="@dimen/px86"
+                    android:layout_height="@dimen/px86"
+                    android:layout_marginStart="@dimen/px70"
+                    android:layout_marginTop="@dimen/px24"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/recruit_user_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/teacherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px82"
+                    android:layout_marginTop="@dimen/px12"
+                    android:text="孙晓雨"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP11"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/headIcon" />
+
+                <TextView
+                    android:id="@+id/teacherFlag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px24"
+                    android:layout_marginEnd="@dimen/left_app"
+                    android:lineSpacingExtra="@dimen/px10"
+                    android:text="毕业于北京清华大学哲学系，专注于企业文化 培训经获奖无数，有很长时间的从业经验。"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP12"
+                    app:layout_constraintBottom_toBottomOf="@+id/headIcon"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/headIcon"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/headIcon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px1"
+            android:layout_marginTop="@dimen/px24"
+            android:background="@color/color_e2"
+            app:layout_constraintTop_toBottomOf="@+id/layout" />
+
+        <TextView
+            android:id="@+id/titleCourseIntroduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px24"
+            android:text="@string/course_introduction_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SP15"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+        <WebView
+            android:id="@+id/webViewCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px12"
+            android:layout_marginTop="@dimen/px24"
+            android:layout_marginEnd="@dimen/px12"
+            android:paddingBottom="@dimen/px40"
+            app:layout_constraintTop_toBottomOf="@+id/titleCourseIntroduction" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

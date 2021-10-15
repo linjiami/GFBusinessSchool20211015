@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshFirstPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollViewFirstPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/firstpageBg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px386"
+                        android:background="@color/theme_text_color"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/searchBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px56"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px30"
+                        android:layout_marginEnd="@dimen/left_app"
+                        android:background="@drawable/shape28_25white"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/px10"
+                        android:text="@string/hint_search_course"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/SP13"
+                        app:drawableStartCompat="@mipmap/search_homepage"
+                        app:layout_constraintBottom_toBottomOf="@+id/searchBtn"
+                        app:layout_constraintLeft_toLeftOf="@+id/searchBtn"
+                        app:layout_constraintRight_toRightOf="@+id/searchBtn"
+                        app:layout_constraintTop_toTopOf="@+id/searchBtn" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/logoBusinessSchool"
+                        android:layout_width="@dimen/px56"
+                        android:layout_height="@dimen/px56"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px27"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/logo_bg"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/searchBtn"
+                        app:riv_border_color="@color/white"
+                        app:riv_border_width="@dimen/px1"
+                        app:riv_oval="true" />
+
+                    <TextView
+                        android:id="@+id/companyName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px20"
+                        android:layout_marginEnd="@dimen/left_app"
+                        android:text="企业商学院"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/SP15"
+                        app:layout_constraintBottom_toBottomOf="@+id/logoBusinessSchool"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toRightOf="@+id/logoBusinessSchool"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/logoBusinessSchool" />
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/bannerFirstPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px264"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px26"
+                        android:layout_marginEnd="@dimen/left_app"
+                        app:banner_indicator_normal_color="@color/color_e0"
+                        app:banner_indicator_selected_color="@color/theme_text_color"
+                        app:banner_radius="@dimen/px15"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/logoBusinessSchool" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/classifyLayoutMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_app"
+                    android:layout_marginTop="@dimen/px19"
+                    android:layout_marginEnd="@dimen/left_app"
+                    android:background="@drawable/bianxian15_white">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/classifyFirstpage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/px10"
+                        android:paddingEnd="@dimen/px10"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutNoticeCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/labaIcon"
+                        android:layout_width="@dimen/px27"
+                        android:layout_height="@dimen/px25"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:src="@mipmap/laba"
+                        app:layout_constraintBottom_toBottomOf="@+id/marqueeView"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/marqueeView" />
+
+                    <com.xj.marqueeview.MarqueeView
+                        android:id="@+id/marqueeView"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/px95"
+                        android:paddingStart="@dimen/px11"
+                        android:paddingTop="@dimen/px30"
+                        android:paddingEnd="@dimen/left_app"
+                        android:paddingBottom="@dimen/px30"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toRightOf="@+id/labaIcon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:mvAnimDuration="500"
+                        app:mvDirection="bottom_to_top"
+                        app:mvInterval="2000" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/courseRecommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/titleCourseRecommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px33"
+                        android:text="@string/course_recommend"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/SP16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/lineCourseRecommend"
+                        android:layout_width="@dimen/px110"
+                        android:layout_height="@dimen/px5"
+                        android:background="@color/theme_text_color"
+                        app:layout_constraintLeft_toLeftOf="@+id/titleCourseRecommend"
+                        app:layout_constraintRight_toRightOf="@+id/titleCourseRecommend"
+                        app:layout_constraintTop_toBottomOf="@+id/titleCourseRecommend" />
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px1"
+                        android:layout_marginTop="@dimen/px30"
+                        android:background="@color/color_d7"
+                        app:layout_constraintTop_toBottomOf="@+id/lineCourseRecommend" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/courseRecommendRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px12"
+                        android:layout_marginEnd="@dimen/px12"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/px42"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+                    <TextView
+                        android:id="@+id/moreCourseRecommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@mipmap/right_jiantou"
+                        android:drawablePadding="@dimen/px8"
+                        android:paddingStart="@dimen/left_app"
+                        android:paddingTop="@dimen/px38"
+                        android:paddingEnd="@dimen/left_app"
+                        android:paddingBottom="@dimen/px38"
+                        android:text="@string/more"
+                        android:textColor="@color/color_878C97"
+                        android:textSize="@dimen/SP11"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/hotVote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/titleHotVote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px33"
+                        android:text="@string/hotVote"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/SP16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/lineHotVote"
+                        android:layout_width="@dimen/px110"
+                        android:layout_height="@dimen/px5"
+                        android:background="@color/theme_text_color"
+                        app:layout_constraintLeft_toLeftOf="@+id/titleHotVote"
+                        app:layout_constraintRight_toRightOf="@+id/titleHotVote"
+                        app:layout_constraintTop_toBottomOf="@+id/titleHotVote" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px30"
+                        app:layout_constraintTop_toBottomOf="@+id/titleHotVote">
+
+                        <include
+                            android:id="@+id/itemVoteSelection"
+                            layout="@layout/item_voteselection" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/courseNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/titlecourseNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px33"
+                        android:text="@string/course_new"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/SP16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/lineCourseNew"
+                        android:layout_width="@dimen/px110"
+                        android:layout_height="@dimen/px5"
+                        android:background="@color/theme_text_color"
+                        app:layout_constraintLeft_toLeftOf="@+id/titlecourseNew"
+                        app:layout_constraintRight_toRightOf="@+id/titlecourseNew"
+                        app:layout_constraintTop_toBottomOf="@+id/titlecourseNew" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/courseNewRV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/left_app"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lineCourseNew" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/championShareNewLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/titlechampionShareNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px33"
+                        android:text="@string/new_championshare"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/SP16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/linechampionShareNew"
+                        android:layout_width="@dimen/px110"
+                        android:layout_height="@dimen/px5"
+                        android:background="@color/theme_text_color"
+                        app:layout_constraintLeft_toLeftOf="@+id/titlechampionShareNew"
+                        app:layout_constraintRight_toRightOf="@+id/titlechampionShareNew"
+                        app:layout_constraintTop_toBottomOf="@+id/titlechampionShareNew" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/championShareRV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/left_app"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linechampionShareNew" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/readCollectionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/titlereadCollection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px33"
+                        android:text="@string/new_readCollection"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/SP16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/linereadCollection"
+                        android:layout_width="@dimen/px110"
+                        android:layout_height="@dimen/px5"
+                        android:background="@color/theme_text_color"
+                        app:layout_constraintLeft_toLeftOf="@+id/titlereadCollection"
+                        app:layout_constraintRight_toRightOf="@+id/titlereadCollection"
+                        app:layout_constraintTop_toBottomOf="@+id/titlereadCollection" />
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/readCollectionViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/px10"
+                        app:layout_constraintTop_toBottomOf="@+id/linereadCollection" />
+
+                    <com.gfbusinessschool.view.PageIndicatorView
+                        android:id="@+id/readCollectionIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/px15"
+                        app:layout_constraintBottom_toBottomOf="@+id/readCollectionViewPager" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/goodPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/titlegoodPersonal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px33"
+                        android:text="@string/good_personal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/SP16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/lineGoodPersonal"
+                        android:layout_width="@dimen/px110"
+                        android:layout_height="@dimen/px5"
+                        android:background="@color/theme_text_color"
+                        app:layout_constraintLeft_toLeftOf="@+id/titlegoodPersonal"
+                        app:layout_constraintRight_toRightOf="@+id/titlegoodPersonal"
+                        app:layout_constraintTop_toBottomOf="@+id/titlegoodPersonal" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/goodPersonalRV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/left_app"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lineGoodPersonal" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/studyingTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/left_app"
+                        android:layout_marginTop="@dimen/px33"
+                        android:text="@string/studying"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/SP16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/linestudyingTitle"
+                        android:layout_width="@dimen/px110"
+                        android:layout_height="@dimen/px5"
+                        android:background="@color/theme_text_color"
+                        app:layout_constraintLeft_toLeftOf="@+id/studyingTitle"
+                        app:layout_constraintRight_toRightOf="@+id/studyingTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/studyingTitle" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/studyingRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px30"
+                        android:background="@color/white"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/px50"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linestudyingTitle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/layoutNoData"
+        layout="@layout/layout_no_data" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/videospeedbg">
+
+    <TextView
+        android:id="@+id/speed100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingEnd="@dimen/px80"
+        android:paddingStart="@dimen/px80"
+        android:paddingTop="@dimen/px20"
+        android:paddingBottom="@dimen/px20"
+        android:gravity="center"
+        android:text="@string/speed_1"
+        android:textSize="@dimen/SP14"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/speed125"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/speed100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingEnd="@dimen/px80"
+        android:paddingTop="@dimen/px20"
+        android:paddingBottom="@dimen/px20"
+        android:paddingStart="@dimen/px80"
+        android:text="@string/speed_125"
+        android:textSize="@dimen/SP14"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/speed150"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/speed125"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingTop="@dimen/px20"
+        android:paddingBottom="@dimen/px80"
+        android:paddingEnd="@dimen/px80"
+        android:paddingStart="@dimen/px80"
+        android:text="@string/speed_150"
+        android:textSize="@dimen/SP14"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

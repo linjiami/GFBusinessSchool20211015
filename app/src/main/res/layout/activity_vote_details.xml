@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:background="@color/color_f4">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/voteIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="@dimen/left_app"
+                    android:layout_marginTop="@dimen/px17"
+                    android:layout_marginEnd="@dimen/left_app"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/placeholder_cover"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/voteIcon"
+                    android:layout_marginTop="@dimen/px17"
+                    android:layout_marginStart="@dimen/left_app"
+                    android:layout_marginEnd="@dimen/left_app">
+
+                    <include
+                        android:id="@+id/layoutSearchBtn1"
+                        layout="@layout/layout_searchbtn1"/>
+                    <include
+                        android:id="@+id/layoutSearchBtn2"
+                        android:visibility="gone"
+                        layout="@layout/layout_searchbtn2"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px18"
+                    android:layout_marginEnd="@dimen/px18"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingBottom="@dimen/px50"
+                    app:layout_constraintTop_toBottomOf="@+id/layout" />
+
+                <include
+                    android:id="@+id/layoutNoData"
+                    layout="@layout/layout_no_data"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/iconActivitiesNotice"
+        android:layout_width="@dimen/px100"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/px18"
+        android:layout_marginBottom="@dimen/px138"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/vote_huodongxuzhi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <include
+        android:id="@+id/bottomLayout"
+        layout="@layout/bottom_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

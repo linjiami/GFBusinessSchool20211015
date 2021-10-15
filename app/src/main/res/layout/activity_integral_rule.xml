@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/ruleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px60"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginEnd="@dimen/left_app"
+        android:lineSpacingExtra="@dimen/lineSpacingExtra"
+        android:textSize="@dimen/SP16"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

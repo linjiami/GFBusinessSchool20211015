@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/px25">
+
+        <View
+            android:id="@+id/personalBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px340"
+            android:background="@color/theme_text_color"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/compayLogo"
+            android:layout_width="@dimen/px56"
+            android:layout_height="@dimen/px56"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px73"
+            android:scaleType="centerCrop"
+            app:riv_border_width="@dimen/px1"
+            app:riv_border_color="@color/white"
+            android:src="@mipmap/placeholder_head"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/tvLoginNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px21"
+            android:text="企业商学院"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP15"
+            app:layout_constraintBottom_toBottomOf="@+id/compayLogo"
+            app:layout_constraintLeft_toRightOf="@+id/compayLogo"
+            app:layout_constraintTop_toTopOf="@+id/compayLogo" />
+
+        <TextView
+            android:id="@+id/changeUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="@dimen/left_app"
+            android:paddingRight="@dimen/left_app"
+            android:paddingBottom="@dimen/px26"
+            android:text="@string/change_user"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP13"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvLoginNo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutUser"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px355"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px18"
+            android:layout_marginEnd="@dimen/left_app"
+            android:background="@drawable/bianxian15_white"
+            app:layout_constraintTop_toBottomOf="@+id/compayLogo">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/personel_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/px15" />
+
+            <TextView
+                android:id="@+id/tvCollected"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px68"
+                android:drawablePadding="@dimen/px18"
+                android:gravity="center"
+                android:text="@string/time_today"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                app:drawableTopCompat="@mipmap/manager_firstpage_todaytime"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tvHistory"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/px18"
+                android:gravity="center"
+                android:text="@string/staff"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                android:layout_marginTop="@dimen/px68"
+                app:drawableTopCompat="@mipmap/manager_firstpage_staff"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/tvCollected"
+                app:layout_constraintRight_toLeftOf="@+id/tvIntegral"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvIntegral"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/px16"
+                android:gravity="center"
+                android:text="@string/time_all"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/SP12"
+                android:layout_marginTop="@dimen/px68"
+                app:drawableTopCompat="@mipmap/manager_firstpage_alltime"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/tvHistory"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/timeToday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px25"
+                android:gravity="center"
+                android:text="1小时35分"
+                android:textColor="@color/color_B97322"
+                android:textSize="@dimen/SP16"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/staffCount"
+                app:layout_constraintTop_toBottomOf="@+id/tvCollected" />
+
+            <TextView
+                android:id="@+id/staffCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="123位"
+                android:textColor="@color/color_B97322"
+                android:textSize="@dimen/SP16"
+                android:layout_marginTop="@dimen/px25"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/timeToday"
+                app:layout_constraintRight_toLeftOf="@+id/timeAll"
+                app:layout_constraintTop_toBottomOf="@+id/tvCollected" />
+
+            <TextView
+                android:id="@+id/timeAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="157小时57分"
+                android:textColor="@color/color_B97322"
+                android:textSize="@dimen/SP16"
+                android:layout_marginTop="@dimen/px25"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/staffCount"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCollected" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/studyTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_app"
+            android:layout_marginTop="@dimen/px18"
+            android:layout_marginEnd="@dimen/left_app"
+            android:paddingBottom="@dimen/px20"
+            android:background="@drawable/bianxian15_white"
+            app:layout_constraintTop_toBottomOf="@+id/layoutUser">
+
+            <TextView
+                android:id="@+id/allStaffTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px24"
+                android:layout_marginTop="@dimen/px24"
+                android:text="@string/allstaff_study"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px20"
+                android:layout_marginEnd="@dimen/px20"
+                android:layout_marginTop="@dimen/px14"
+                app:layout_constraintTop_toBottomOf="@+id/allStaffTitle"
+                android:orientation="vertical"
+                android:background="@drawable/bianxian6_b2_white">
+
+                <include
+                    android:id="@+id/tabLayout1"
+                    layout="@layout/manager_tablelayout"/>
+                <include
+                    android:id="@+id/tabLayout2"
+                    layout="@layout/manager_tablelayout"/>
+                <include
+                    android:id="@+id/tabLayout3"
+                    layout="@layout/manager_tablelayout"/>
+                <include
+                    android:id="@+id/tabLayout4"
+                    layout="@layout/manager_tablelayout"/>
+                <include
+                    android:id="@+id/tabLayout5"
+                    layout="@layout/manager_tablelayout"/>
+                <include
+                    android:id="@+id/tabLayout6"
+                    layout="@layout/manager_tablelayout"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/todayRanklistLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px18"
+            app:layout_constraintTop_toBottomOf="@+id/studyTimeLayout">
+            <include
+                android:id="@+id/todayRanklist"
+                layout="@layout/ranklist_parent_layout"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/alltimeRanklistLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px18"
+            app:layout_constraintTop_toBottomOf="@+id/todayRanklistLayout">
+            <include
+                android:id="@+id/alltimeRanklist"
+                layout="@layout/ranklist_parent_layout"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutRanklistTestNopass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/alltimeRanklistLayout">
+            <TextView
+                android:id="@+id/titleTestNopassRanklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/px32"
+                android:layout_marginStart="@dimen/left_app"
+                android:text="@string/ranklist_test_nopass"
+                android:textSize="@dimen/SP16"
+                android:textColor="@color/black"/>
+            <View
+                android:id="@+id/lineTestNopassRanklist"
+                android:layout_width="0dp"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_height="@dimen/px5"
+                app:layout_constraintBottom_toBottomOf="@+id/titleTestNopassRanklist"
+                app:layout_constraintLeft_toLeftOf="@+id/titleTestNopassRanklist"
+                app:layout_constraintRight_toRightOf="@+id/titleTestNopassRanklist"
+                android:layout_marginStart="@dimen/px20"
+                android:layout_marginEnd="@dimen/px20"
+                android:background="@color/theme_text_color"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/testNoPassRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/lineTestNopassRanklist"
+                android:background="@color/white"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="@dimen/px32"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

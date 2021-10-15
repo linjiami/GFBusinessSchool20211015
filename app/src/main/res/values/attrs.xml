@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="courseTab">
+        <item>评论</item>
+        <item>课件</item>
+    </string-array>
+
+    <string-array name="ranklistTab">
+        <item>门店排行</item>
+        <item>课程排行</item>
+        <item>个人排行</item>
+    </string-array>
+
+    <string-array name="liveTab">
+        <item>进行中</item>
+        <item>历史直播</item>
+    </string-array>
+    <string-array name="sexUserArray">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string-array name="classTabArray">
+        <item>介绍</item>
+        <item>目录</item>
+        <item>课件</item>
+    </string-array>
+    <string-array name="myCollectedTab">
+        <item>课程</item>
+        <item>读书汇</item>
+    </string-array>
+    <string-array name="audioTabArray">
+        <item>案例详情</item>
+        <item>课件</item>
+    </string-array>
+</resources>

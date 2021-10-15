@@ -1,0 +1,81 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/headImg"
+        android:layout_width="@dimen/px80"
+        android:layout_height="@dimen/px80"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@mipmap/placeholder_head"
+        android:layout_marginStart="@dimen/px36"
+        app:riv_oval="true"
+        app:riv_border_width="0dp" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/biyexuanzhangIcon"
+        android:layout_width="@dimen/px30"
+        android:layout_height="@dimen/px30"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        android:src="@mipmap/biyexunzhang"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/headImg"
+        app:layout_constraintRight_toRightOf="@+id/headImg"/>
+
+    <TextView
+        android:id="@+id/timeComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/px40"
+        android:layout_marginTop="@dimen/px25"
+        android:text="2020-11-20"
+        android:textColor="@color/color_5b"
+        android:textSize="@dimen/SP13" />
+
+    <TextView
+        android:id="@+id/userNameComment"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/timeComment"
+        app:layout_constraintLeft_toRightOf="@+id/headImg"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/px30"
+        android:layout_marginEnd="@dimen/px10"
+        android:layout_marginTop="@dimen/px23"
+        android:text="孙晓雨/老板"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP15" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/headImg"
+        app:layout_constraintTop_toBottomOf="@+id/userNameComment"
+        android:layout_marginStart="@dimen/px30"
+        android:layout_marginEnd="@dimen/px40"
+        android:layout_marginTop="@dimen/px26"
+        android:text="讲的真好，非常适合我们家居行业的人，让我成长了很多"
+        android:textColor="@color/color_858484"
+        android:textSize="@dimen/SP15" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:background="@color/color_e2"
+        app:layout_constraintTop_toBottomOf="@+id/comment"
+        android:layout_marginTop="@dimen/px24"
+        android:layout_marginStart="@dimen/px30"
+        android:layout_marginEnd="@dimen/px40"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/titleCourseDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px24"
+        android:text="公司企业文化"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP15"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:layout_marginTop="@dimen/px24"
+        android:background="@color/color_e2"/>
+
+
+    <TextView
+        android:id="@+id/shareContentCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px10"
+        android:layout_marginEnd="@dimen/left_app"
+        android:lineSpacingExtra="@dimen/px10"
+        android:text="分享人：孙晓雨     \n个人职位：店长 \n归属城市：辽宁-大连 \n归属店面：大连华南红星美凯龙"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:layout_marginTop="@dimen/px24"
+        android:background="@color/color_e2"/>
+
+    <TextView
+        android:id="@+id/titleCourseIntroduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px24"
+        android:text="@string/share_introduction"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP15"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/shareContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginTop="@dimen/px24"
+        android:layout_marginEnd="@dimen/left_app"
+        android:lineSpacingExtra="@dimen/lineSpacingExtra"
+        android:text="分享介绍内容"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP12"
+        app:layout_constraintTop_toBottomOf="@+id/titleCourseIntroduction" />
+
+</LinearLayout>

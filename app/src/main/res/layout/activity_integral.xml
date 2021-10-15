@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="1"
+        android:background="@color/color_f4">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintVertical_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px312"
+                    android:layout_marginStart="@dimen/left_app"
+                    android:layout_marginTop="@dimen/px18"
+                    android:layout_marginEnd="@dimen/left_app"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/integral_bg"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/intrgralLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px312"
+                    android:layout_marginStart="@dimen/left_app"
+                    android:layout_marginTop="@dimen/px18"
+                    android:layout_marginEnd="@dimen/left_app"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/countIntegral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="368积分"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/SP24" />
+
+
+                    <TextView
+                        android:id="@+id/ruleIntegral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px24"
+                        android:text="@string/integralRule"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/SP16" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTimeSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px54"
+                    android:layout_marginStart="@dimen/left_app"
+                    android:layout_marginTop="@dimen/px24"
+                    android:layout_marginEnd="@dimen/left_app"
+                    android:background="@drawable/bianxian15_white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/px14"
+                    android:paddingEnd="@dimen/px30"
+                    android:text="@string/integral_timeslect"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP16"
+                    app:drawableEndCompat="@mipmap/bottom_jiantou"
+                    app:layout_constraintTop_toBottomOf="@+id/intrgralLayout" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px24"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingBottom="@dimen/px50"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTimeSelect" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

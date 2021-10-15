@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefreshCourseRanklist">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f4"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px34"
+                android:layout_marginStart="@dimen/left_app"
+                android:text="@string/look_count_title"
+                android:textSize="@dimen/SP16"
+                android:textColor="@color/black"/>
+            <View
+                android:id="@+id/lookCoutLine"
+                android:layout_width="@dimen/px110"
+                android:layout_height="@dimen/px5"
+                android:layout_marginStart="@dimen/px38"
+                android:background="@color/theme_text_color"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lookCoutRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="@dimen/px32"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px34"
+                android:layout_marginStart="@dimen/left_app"
+                android:text="@string/comment_count_title"
+                android:textSize="@dimen/SP16"
+                android:textColor="@color/black"/>
+            <View
+                android:id="@+id/commentCoutLine"
+                android:layout_width="@dimen/px110"
+                android:layout_height="@dimen/px5"
+                android:layout_marginStart="@dimen/px38"
+                android:background="@color/theme_text_color"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cimmentCountRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="@dimen/px32"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/left_app"
+    android:layout_marginEnd="@dimen/left_app"
+    android:layout_marginTop="@dimen/px17">
+
+    <ImageView
+        android:id="@+id/certificateIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/graductionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginStart="@dimen/px110"
+        android:layout_marginEnd="@dimen/px110"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_gravity="center_horizontal"
+            android:text="孙晓雨"
+            android:textSize="@dimen/SP18"
+            android:textColor="@color/color_3b3e45"/>
+
+        <TextView
+            android:id="@+id/graductionContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/userName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/graduction_content"
+            android:layout_marginTop="@dimen/px20"
+            android:textSize="@dimen/SP12"
+            android:gravity="center"
+            android:textColor="@color/color_3b3e45"/>
+
+
+        <TextView
+            android:id="@+id/graductionTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/graductionContent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="@dimen/px33"
+            android:layout_marginTop="@dimen/px24"
+            android:text="2020-03-13"
+            android:textSize="@dimen/SP12"
+            android:textColor="@color/color_3b3e45"/>
+
+        <TextView
+            android:id="@+id/graductionCompany"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/graductionContent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/graductionTime"
+            android:layout_marginStart="@dimen/px18"
+            android:layout_marginTop="@dimen/px24"
+            android:gravity="right"
+            android:text="潘峰家具"
+            android:textSize="@dimen/SP12"
+            android:textColor="@color/color_3b3e45"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/honorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginStart="@dimen/px110"
+        android:layout_marginEnd="@dimen/px110"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/honorContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:ellipsize="end"
+            android:text="        祝贺“孙晓雨”荣获“月度优秀员工” 特颁此证，以兹鼓励！"
+            android:textColor="@color/color_3b3e45"
+            android:textSize="@dimen/SP12"/>
+
+        <TextView
+            android:id="@+id/honorCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="潘峰家具\n2020-03-13"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/px40"
+            android:textSize="@dimen/SP12"
+            android:textColor="@color/color_3b3e45"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

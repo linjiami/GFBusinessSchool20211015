@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px50"
+        android:layout_marginTop="@dimen/px24"
+        android:layout_marginEnd="@dimen/px50"
+        android:gravity="center"
+        android:text="关于加大销售力度的年度计划会议"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP15"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+    <TextView
+        android:id="@+id/timeNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px22"
+        android:layout_marginEnd="@dimen/left_app"
+        android:text="2019-12-12 14:00"
+        android:textColor="@color/color_66"
+        android:textSize="@dimen/SP12"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleNotice" />
+
+    <WebView
+        android:id="@+id/webViewNotice"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:layout_marginTop="@dimen/px24"
+        android:layout_marginStart="@dimen/left_app"
+        android:layout_marginEnd="@dimen/left_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeNotice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

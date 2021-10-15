@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/px46"
+    android:gravity="center_horizontal"
+    android:id="@+id/teacherItemLayout"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/headIcon"
+        android:layout_width="@dimen/px86"
+        android:layout_height="@dimen/px86"
+        app:riv_oval="true"
+        android:src="@mipmap/recruit_user_icon"/>
+
+    <TextView
+        android:id="@+id/teacherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px12"
+        android:text="孙晓雨"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP11"/>
+
+</LinearLayout>

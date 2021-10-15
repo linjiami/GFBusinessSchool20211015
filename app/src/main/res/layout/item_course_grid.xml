@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutCourseGrid"
+    android:layout_marginTop="@dimen/px24"
+    android:layout_marginBottom="@dimen/px10"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/coverCourseGrid"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@mipmap/placeholder_cover"
+        app:riv_border_width="@dimen/px1"
+        app:riv_border_color="@color/color_e0"
+        android:layout_marginStart="@dimen/px14"
+        android:layout_marginEnd="@dimen/px14"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/radius_list"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleCourseGrid"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px19"
+        app:layout_constraintLeft_toLeftOf="@+id/coverCourseGrid"
+        app:layout_constraintRight_toRightOf="@+id/coverCourseGrid"
+        app:layout_constraintTop_toBottomOf="@+id/coverCourseGrid"
+        android:text="家居企业必上的课"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP14"
+        android:lines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/countCourseGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px12"
+        app:layout_constraintRight_toRightOf="@+id/coverCourseGrid"
+        android:layout_marginEnd="@dimen/px14"
+        app:layout_constraintTop_toBottomOf="@+id/titleCourseGrid"
+        android:text="3658次"
+        android:textColor="@color/color_969595"
+        android:textSize="@dimen/SP11"/>
+
+    <TextView
+        android:id="@+id/teacherFlagCourseGrid"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px12"
+        app:layout_constraintLeft_toLeftOf="@+id/coverCourseGrid"
+        app:layout_constraintRight_toLeftOf="@+id/countCourseGrid"
+        android:layout_marginEnd="@dimen/px14"
+        app:layout_constraintTop_toBottomOf="@+id/titleCourseGrid"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="赵龙|中国鲁班大学校长"
+        android:textColor="@color/color_66"
+        android:textSize="@dimen/SP11"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

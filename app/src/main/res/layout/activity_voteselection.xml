@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/color_f4">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px54"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@null"
+            android:layout_marginTop="@dimen/px18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <Button
+                android:id="@+id/btnStarding"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/px30"
+                android:paddingEnd="@dimen/px30"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/btnAuthor"
+                android:background="@drawable/shape6_themecolor_left"
+                android:text="@string/living"
+                android:textSize="@dimen/SP15"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnNoStarted"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/px30"
+                android:paddingEnd="@dimen/px30"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/btnStarding"
+                app:layout_constraintRight_toLeftOf="@+id/btnComplete"
+                android:background="@drawable/shape6_white_right"
+                android:text="@string/no_started"
+                android:textSize="@dimen/SP15"
+                android:textColor="@color/color_14"/>
+
+            <Button
+                android:id="@+id/btnComplete"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/px30"
+                android:paddingEnd="@dimen/px30"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/btnNoStarted"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/shape6_white_right"
+                android:text="@string/complete"
+                android:textSize="@dimen/SP15"
+                android:textColor="@color/color_14"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutFollow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginTop="@dimen/px18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutFollow"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutCalendar"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/todayTv"
+        android:layout_width="@dimen/px60"
+        android:layout_height="@dimen/px60"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/px19"
+        android:text="1"
+        android:textSize="@dimen/SP13"
+        android:textColor="@color/color_33"
+        android:background="@drawable/shape30_f4"/>
+
+</LinearLayout>

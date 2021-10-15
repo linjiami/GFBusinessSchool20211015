@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.gfbusinessschool.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipeRefreshStoreRankList"
+        android:background="@color/color_f4">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/px50">
+
+                <include
+                    android:id="@+id/includeRanklist2"
+                    layout="@layout/ranklist_parent_layout"/>
+
+                <include
+                    android:id="@+id/includeRanklist3"
+                    android:visibility="gone"
+                    layout="@layout/ranklist_parent_layout"/>
+
+                <include
+                    android:id="@+id/includeRanklist4"
+                    android:visibility="gone"
+                    layout="@layout/ranklist_parent_layout"/>
+
+                <include
+                    android:id="@+id/includeRanklist1"
+                    layout="@layout/ranklist_parent_layout"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

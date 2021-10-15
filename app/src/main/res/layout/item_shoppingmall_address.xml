@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutAddress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/left_app"
+    android:layout_marginTop="@dimen/px20"
+    android:layout_marginEnd="@dimen/left_app"
+    android:background="@drawable/shape12_white_aeafaf"
+    android:paddingBottom="@dimen/px33">
+
+    <ImageView
+        android:id="@+id/modifyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:padding="@dimen/px24"
+        android:src="@mipmap/modify_shoppingmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px24"
+        android:layout_marginTop="@dimen/px33"
+        android:layout_marginEnd="@dimen/px24"
+        android:text="北京市朝阳区十里河弘善家园313号楼"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP15"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/modifyLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px24"
+        android:layout_marginTop="@dimen/px20"
+        android:layout_marginEnd="@dimen/px24"
+        android:text="孙晓雨   18023646855"
+        android:textColor="@color/color_33"
+        android:textSize="@dimen/SP15"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/modifyLayout"
+        app:layout_constraintTop_toBottomOf="@+id/address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
