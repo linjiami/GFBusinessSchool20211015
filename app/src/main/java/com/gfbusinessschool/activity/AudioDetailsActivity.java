@@ -66,7 +66,6 @@ public class AudioDetailsActivity extends BaseActivity<ActivityAudiodetailsBindi
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         public void run() {
-            // TODO Auto-generated method stub
             try {
                 if (mediaPlayer==null) return;
                 handler.postDelayed(runnableUpdate, 1000);//每秒钟更新一次
